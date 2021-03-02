@@ -6,7 +6,7 @@ docker run --name db_bookmedik \
 -e MYSQL_DATABASE=bookmedik \
 -e MYSQL_USER=bookmedik_user \
 -e MYSQL_PASSWORD=bookmedik_pass \
--v ~/Github/docker_php/build/Tarea1/database:/var/lib/mysql \
+-v ~/GitHub/docker_php/build/Tarea1/database:/var/lib/mysql \
 -d mariadb:latest
 ```
 
