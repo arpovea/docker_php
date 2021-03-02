@@ -51,6 +51,7 @@ class Database {
 ```
 Creamos la configuracion de apache2:
 
+```
 <VirtualHost *:80>
   ServerAdmin me@mydomain.com
   DocumentRoot /var/www/bookmedik
@@ -66,3 +67,5 @@ Creamos la configuracion de apache2:
   CustomLog ${APACHE_LOG_DIR}/access.log combined
 
 </VirtualHost>
+
+```
