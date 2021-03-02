@@ -68,3 +68,10 @@ Creamos la configuración de apache2:
 
 </VirtualHost>
 ```
+
+Una vez tenemos el Dockerfile realizamos el siguietne comando para general la imagen:
+
+`docker build -t arp2092/bookmedik_php:v1 . `
+
+Ahora podemos usar esta imagen junto a la base de datos en un docker-compose, que se encuenta en el directorio deploy.
+
