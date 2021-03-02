@@ -10,9 +10,9 @@ docker run --name db_bookmedik \
 -d mariadb:latest
 ```
 
-Editamos el fichero schema.sql para que no cree la base de datos bookmedik:
+Editamos el fichero schema.sql para que no cree la base de datos bookmedik, eliminando la linea de crear la base de datos:
 
-`/*create database bookmedik;*/`
+`sed -i "5d" bookmedik/schema.sql`  
 
 Copiamos el el esquema en el contenedor:
 
@@ -22,7 +22,7 @@ Ejecutamos la carga de datos:
 
 `docker exec db_bookmedik bash -c 'mysql -uroot -p"$MYSQL_ROOT_PASSWORD" < /tmp/schema.sql'`
 
-Cambiamos la configuracion de "core/controller/Database.php":
+Cambiamos la configuración de "core/controller/Database.php":
 
 ```
 <?php
@@ -49,7 +49,7 @@ class Database {
 
 }
 ```
-Creamos la configuracion de apache2:
+Creamos la configuración de apache2:
 
 ```
 <VirtualHost *:80>
@@ -67,5 +67,4 @@ Creamos la configuracion de apache2:
   CustomLog ${APACHE_LOG_DIR}/access.log combined
 
 </VirtualHost>
-
 ```
