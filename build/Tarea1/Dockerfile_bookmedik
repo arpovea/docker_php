@@ -1,0 +1,7 @@
+FROM debian:latest
+RUN apt update && \
+    apt -y upgrade && \
+    apt -y install apache2 \
+    php7.3 php7.3-mysql libapache2-mod-php7.3 \
+RUN a2enmod php7.3
+CMD apache2ctl -D FOREGROUND
