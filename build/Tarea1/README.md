@@ -30,7 +30,7 @@ class Database {
     public static $db;
     public static $con;
     function Database(){
-        $this->user=getenv(ENV_MYSQL_USER);$this->pass=getenv(ENV_MYSQL_PASSWORD);$this->host=getenv(DB_PORT_3306_TCP_ADDR);$this->ddbb=getenv(ENV_MYSQL_DATABASE);
+        $this->user=getenv(ENV_MYSQL_USER);$this->pass=getenv(ENV_MYSQL_PASSWORD);$this->host=getenv(ENV_HOST);$this->ddbb=getenv(ENV_MYSQL_DATABASE);
     }
 
     function connect(){
