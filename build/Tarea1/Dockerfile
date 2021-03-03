@@ -6,5 +6,6 @@ RUN apt update && \
 COPY bookmedik/ /var/www/bookmedik
 COPY Database.php /var/www/bookmedik/core/controller/Database.php
 COPY 000-default.conf /etc/apache2/sites-available/000-default.conf
-RUN a2enmod php7.3
+RUN a2enmod php7.3 &&\
+    chmod 755 /var/www/bookmedik/core/controller/Database.php
 CMD apache2ctl -D FOREGROUND

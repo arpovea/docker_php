@@ -12,7 +12,7 @@ services:
     environment:
       - ENV_MYSQL_USER=bookmedik_user
       - ENV_MYSQL_PASSWORD=bookmedik_pass
-      - DB_PORT_3306_TCP_ADDR=db
+      - ENV_HOST=db
       - ENV_MYSQL_DATABASE=bookmedik
     volumes:
       - ./logs:/var/log/apache2
