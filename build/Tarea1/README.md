@@ -69,7 +69,7 @@ Creamos la configuración de apache2:
 </VirtualHost>
 ```
 
-Una vez tenemos el Dockerfile realizamos el siguietne comando para general la imagen:
+Una vez tenemos el Dockerfile realizamos el siguiente comando para general la imagen:
 
 `docker build -t arp2092/bookmedik_php:v1 . `
 
